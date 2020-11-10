@@ -1,39 +1,70 @@
 package kr.co.fastcampus.eatgo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant{
-    private final Long id;
-    private final String name;
-    private final String address;
+@Entity //persistence
+public class Restaurant {
+
+    @Id
+    @GeneratedValue //id에 어떤값을 넣어야할지
+    private Long id;
+    private String name;
+    private String address;
+
+    @Transient //임시로 처리했다
     private final List<MenuItem> menuItems = new ArrayList<>();
+
+    public Restaurant() {
+    }
+
+    public Restaurant(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     public Restaurant(Long id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public Long getId() {
-        return id; }
+        return id;
+    }
+
     public String getName() {
         return name;
     }
+
     public String getAddress() {
         return address;
     }
+
     public String getInformation() {
-        return name + " in "+ address;
+        return name + " in " + address;
     }
+
     public List<MenuItem> getMenuItems() {
         return menuItems;
     }
+
     public void addMenuItem(MenuItem menuItem) {
         menuItems.add(menuItem);
     }
+
     public void setMenuItems(List<MenuItem> menuItems) {
-        for(MenuItem menuItem : menuItems) {
+        for (MenuItem menuItem : menuItems) {
             addMenuItem(menuItem);
         }
+
     }
 }
