@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface RestaurantRepository extends CrudRepository<Restaurant, Long>{
     List<Restaurant> findAll();
-
     Optional<Restaurant> findById(Long id);
     //Optional은 null을 처리하지 않고 Restaurant가 있냐없냐를 구분하도록 만들어짐
 
     Restaurant save(Restaurant restaurant);
+
 }
