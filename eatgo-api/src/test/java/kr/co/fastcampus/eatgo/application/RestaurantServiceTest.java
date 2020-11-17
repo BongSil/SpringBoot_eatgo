@@ -31,7 +31,6 @@ public class RestaurantServiceTest {
 
         mockRestaurantRepository();
         mockMenuItemRepository();
-
         restaurantService =new RestaurantService(restaurantRepository, menuItemRepository);
     }
     private void mockRestaurantRepository() {

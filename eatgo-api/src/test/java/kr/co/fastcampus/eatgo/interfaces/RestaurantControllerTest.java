@@ -90,7 +90,8 @@ public class RestaurantControllerTest {
                 .andExpect(content().string(containsString("\"id\":2020")))
                 .andExpect(content().string(containsString("\"name\":\"Cyber Food\"")));
     }
-   @Test
+
+    @Test
     public void detailWithNotExisted() throws Exception {
         given(restaurantService.getRestaurant(404L)) //여기서 404를 못찾을때의 예외처리
                 .willThrow(new RestaurantNotFoundException(404L));

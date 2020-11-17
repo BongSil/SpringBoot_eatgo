@@ -18,5 +18,4 @@ public class RestaurantErrorAdvice {
     public String handleNotFound() {
         return "{}";
     }
-
 }

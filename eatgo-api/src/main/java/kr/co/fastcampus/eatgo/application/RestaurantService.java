@@ -26,7 +26,6 @@ public class RestaurantService {
         List<Restaurant> restaurants = restaurantRepository.findAll();
         return restaurants;
     }
-
     public Restaurant getRestaurant(Long id) {
         Restaurant restaurant = restaurantRepository.findById(id)
                 .orElseThrow(() -> new RestaurantNotFoundException(id));

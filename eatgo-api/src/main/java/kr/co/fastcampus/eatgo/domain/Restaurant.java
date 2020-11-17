@@ -38,7 +38,6 @@ public class Restaurant {
         return name + " in " + address;
     }
 
-
     public void setMenuItems(List<MenuItem> menuItems) {
         this.menuItems = new ArrayList<>(menuItems); //20강
 

@@ -51,5 +51,4 @@ public class MenuItemServiceTests {
         verify(menuItemRepository, times(2)).save(any());
         verify(menuItemRepository, times(1)).deleteById(eq(1004L));
     }
-
 }

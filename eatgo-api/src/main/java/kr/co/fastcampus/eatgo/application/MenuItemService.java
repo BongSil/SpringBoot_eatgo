@@ -24,7 +24,6 @@ public class MenuItemService {
             update(restaurantId, menuItem);
         }
     }
-
     private void update(Long restaurantId, MenuItem menuItem) {
         if(menuItem.isDestroy()) { //삭제여부확인
             menuItemRepository.deleteById(menuItem.getId());

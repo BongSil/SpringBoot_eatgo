@@ -23,7 +23,6 @@ public class MenuItemController {
             @RequestBody List<MenuItem> menuItems) {
 
             menuItemService.bulkUpdate(restaurantId,menuItems);
-
             return "";
     }
 }
